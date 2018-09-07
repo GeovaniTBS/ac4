@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>AC4</title>
+
+
+<script language="JavaScript">
+
+
+{
+
+     if (strLogin == "")
+      { 
+         alert("Preencha corretamente o campo Login!");
+         document.frmLogin.txtLogin.focus();
+         return false;
+      }
+     else if (strSenha == "")
+      { 
+         alert("Preencha corretamente o campo Senha!");
+         document.frmLogin.pwdSenha.focus();
+         return false;
+      }
+     else 
+      { 
+          alert("Login feito com sucesso!!");
+     
+         return true;
+      }
+}
+</script>
+</head>
+
+<body style="background:yellowgreen">
+
+
+<form name="frmLogin" action="validar_login.asp" method="post"  onsubmit="javascript:return ValidarLogin(txtLogin.value,pwdSenha.value);">
+
+<p>
+<fieldset id="fldLogin" title="Login" style="width: 300px;">
+<legend align="left">Efetue o Login!</legend>
+<table id="tabCores" width="300" border="0" bgcolor="orange">
+    <tr>
+      <td width="70%" align="center">Digite seu Login</td>
+      <td width="30%" align="center"><input type="text" name="txtLogin" value="LOGIN" onfocus="javascript:this.value='';"></td>
+   </tr>
+    <tr>
+      <td width="70%" align="center">Digite sua Senha</td>
+      <td width="30%" align="center"><input type="password" name="pwdSenha" value="SENHA"  onfocus="javascript:this.value='';"></td>
+   </tr>
+    <tr>
+      <td width="100%" align="center" colspan="2">&nbsp;</td>
+   </tr>
+    <tr>
+      <td width="100%" align="center" colspan="2"><input type="submit" name="btnEnviar" value="Enviar">&nbsp;&nbsp;&nbsp;<input type="reset" name="btnLimpar" value="Limpar"></td>
+   </tr>
+</table>
+</fieldset>
+</form>
+</body>
+
+</html>
